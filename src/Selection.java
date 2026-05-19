@@ -2,7 +2,7 @@ import java.util.Comparator;
 import java.util.ArrayList;
 
 public class Selection {
-    //.
+    
     // This class should not be instantiated.
     private Selection() { }
 
