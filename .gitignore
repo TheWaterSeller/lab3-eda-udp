@@ -1,0 +1,9 @@
+# Archivos compilados de Java
+*.class
+src/*.class
+
+# Carpetas de VS Code
+.vscode/
+
+# os
+.DS_Store
