@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Comparator;
 import edu.princeton.cs.algs4.StdRandom;
 public class Quick {
-
+    //.
     // This class should not be instantiated.
     private Quick() { }
 
