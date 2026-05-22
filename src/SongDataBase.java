@@ -46,11 +46,36 @@ class SongDataBase {
         }
     }
 
-    public void sequentialSearch(String artist){
 
-    }
+        public ArrayList<Song> sequentialSearch(String artist) {
+            ArrayList<Song> lista = new ArrayList<>();
+            for (Song s : songs) {
+                if (s.getArtist().equals(artist)) {
+                    lista.add(s);
+                }
+            }
+            return lista;
+        }
 
-    public void binarySearch(String artist){
-        
-    }
+        public ArrayList<Song> binarySearch(String artist) {
+            ArrayList<Song> lista = new ArrayList<>();
+            int lo = 0;
+            int hi = songs.size();
+            while (lo < hi) {
+                int mid = lo + (hi - lo) / 2;
+                int cmp = songs.get(mid).getArtist().compareTo(artist);
+                if (cmp < 0) {
+                    lo = mid + 1;
+                } else {
+                    hi = mid;
+                }
+            }
+            int idx = lo;
+            while (idx < songs.size() && songs.get(idx).getArtist().equals(artist)) {
+                lista.add(songs.get(idx));
+                idx++;
+            }
+            return lista;
+        }
+
 }
